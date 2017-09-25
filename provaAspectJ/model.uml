@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:PapyrusJava="http://www.eclipse.org/papyrus/PapyrusJava/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:standard="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML">
+  <uml:Model xmi:id="_I4Gs4HZ9EeefbP9VJpnRKQ" name="model">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_ww0KkHguEee1g-BCq03idQ" annotatedElement="_y1KBAHamEeeOUYOju89OBg">
+      <body>Aspect&#xD;
+</body>
+    </ownedComment>
+    <packagedElement xmi:type="uml:Package" xmi:id="_78aSsHahEeeOUYOju89OBg" name="provaAspectJ">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8AorYHahEeeOUYOju89OBg" name="provaAspectJ">
+        <packagedElement xmi:type="uml:Class" xmi:id="_8AwAIHahEeeOUYOju89OBg" name="Logger"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8F6M8HahEeeOUYOju89OBg" name="FileHandler"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8GKEkHahEeeOUYOju89OBg" name="Vector"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8Hx1MHahEeeOUYOju89OBg" name="pointcut"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8IwFkHahEeeOUYOju89OBg" name="RuntimeException"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_8I1lIHahEeeOUYOju89OBg" name="Date"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_RLOZ0HaiEeeOUYOju89OBg" name="Map"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_y8RScHaiEeeOUYOju89OBg" name="double"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_y8SgkHaiEeeOUYOju89OBg" name="int"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_H5alUHakEeeOUYOju89OBg" name="Gestore eventi" visibility="package">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pkfY0HakEeeOUYOju89OBg" name="timerrecord" visibility="private" type="_RLOZ0HaiEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pkfY0XakEeeOUYOju89OBg" name="timer" visibility="private" type="_RLOZ0HaiEeeOUYOju89OBg" isUnique="false">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6knuoHbIEeeKwv_a6u0sZQ" value="1"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6krZAHbIEeeKwv_a6u0sZQ" value="1"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pkfY0nakEeeOUYOju89OBg" name="alpha" visibility="private" isLeaf="true" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_6j0jABydEduyofBvg4RL2w"/>
+            <defaultValue xmi:type="uml:OpaqueExpression" xmi:id="_pkf_4HakEeeOUYOju89OBg" name="defaultValue">
+              <language>JAVA</language>
+              <body>0.2</body>
+            </defaultValue>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_pkf_4XakEeeOUYOju89OBg" name="numberofexecution" visibility="private" isLeaf="true" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+          </ownedAttribute>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_pkkRUHakEeeOUYOju89OBg" name="LogStructure" specification="_pkf_43akEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    record = new HashMap&lt;String, RecordTime>();&#xD;
+    timer = new HashMap&lt;String, Timer>();&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_pkn7sHakEeeOUYOju89OBg" name="getRecord" specification="_pkmGgHakEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    return record;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_pkqX8XakEeeOUYOju89OBg" name="setRecord" specification="_pkpJ0HakEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    this.record = record;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_pky60HakEeeOUYOju89OBg" name="setSSTT" specification="_pkrmEHakEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    System.out.println(&quot;ciaooooooo&quot;);&#xD;
+    if (record.containsKey(method + oggetto) == false) {&#xD;
+        //System.out.println(&quot; method&quot;+method+);&#xD;
+        timer.put(method + oggetto + istanza, new Timer());&#xD;
+        System.out.println(&quot;INIZIO&quot; + method + istanza + oggetto);&#xD;
+        RecordTime rt = new RecordTime();&#xD;
+        //rt.setSENT(method+istanza,t);&#xD;
+        //System.out.println(&quot;mt 1 &quot;+method);&#xD;
+        rt.mt.put(method + oggetto, 0);&#xD;
+        rt.setSENT(method + oggetto + istanza, t);&#xD;
+        record.put(method + oggetto, rt);&#xD;
+    //System.out.println(rt);&#xD;
+    } else {&#xD;
+        //System.out.println(&quot;gia inserito&quot;+method);&#xD;
+        long deltat = getDeltaT(method, oggetto);&#xD;
+        //System.out.println(&quot;valore di deltat&quot;+deltat+method);&#xD;
+        RecordTime rt = record.get(method + oggetto);&#xD;
+        Integer i = rt.mt.get(method + oggetto);&#xD;
+        System.out.println(&quot;sono qui rt&quot; + i + &quot; &quot; + method + &quot; &quot; + istanza);&#xD;
+        if (i >= numberofexecution) {&#xD;
+            TimerTask wd = new WatchDog(method + &quot; &quot; + istanza + &quot; &quot; + oggetto);&#xD;
+            System.out.println(&quot;watchdog per &quot; + method + &quot; &quot; + wd);&#xD;
+            System.out.println(&quot;valore del timer&quot; + deltat + method + istanza + oggetto);&#xD;
+            Timer tim = new Timer();&#xD;
+            //System.out.println(&quot;INIZIO&quot;+method+istanza);&#xD;
+            tim.schedule(wd, deltat);&#xD;
+            System.out.println(&quot;tempo timer&quot; + deltat + &quot; &quot; + istanza);&#xD;
+            timer.put(method + oggetto + istanza, tim);&#xD;
+        }&#xD;
+        System.out.println(&quot;ho settato il valore&quot;);&#xD;
+        rt.setSENT(method + oggetto + istanza, t);&#xD;
+        record.put(method + oggetto, rt);&#xD;
+    }&#xD;
+//RecordTime rt=record.get(method);&#xD;
+//System.out.println(&quot;tempo salvato al SST&quot;+rt+t.getTime()+rt.getSENT(method));&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_pk8r0HakEeeOUYOju89OBg" name="setSEN" specification="_pk0wAHakEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    //System.out.println(&quot;mt 2 &quot;+method);&#xD;
+    RecordTime rt = record.get(method + oggetto);&#xD;
+    //System.out.println(&quot;il metodo&quot;+ method);&#xD;
+    Integer i = rt.mt.get(method + oggetto);&#xD;
+    if (i >= numberofexecution) {&#xD;
+        Timer tim = timer.get(method + oggetto + istanza);&#xD;
+        System.out.println(&quot;FINE&quot; + &quot; &quot; + method + oggetto + istanza);&#xD;
+        try {&#xD;
+            tim.cancel();&#xD;
+        } catch (NullPointerException e) {&#xD;
+            System.out.println(&quot;FINE timer&quot; + &quot; &quot; + method + oggetto + istanza);&#xD;
+            System.out.println(&quot;timer non definito&quot;);&#xD;
+        }&#xD;
+    } else {&#xD;
+        i++;&#xD;
+        System.out.println(&quot;iiiii &quot; + i);&#xD;
+        rt.mt.put(method + oggetto, i);&#xD;
+        record.put(method + oggetto, rt);&#xD;
+    }&#xD;
+    //System.out.println(&quot;ho interrotto&quot;);&#xD;
+    //System.out.println(&quot;tempo al SEN&quot;+t.getTime());&#xD;
+    long time = (long) (t.getTime() - rt.getSENT(method + oggetto + istanza).getTime());&#xD;
+    System.out.println(&quot;tempo getSENT&quot; + time + method + istanza + oggetto);&#xD;
+    Date deltat = new Date(time);&#xD;
+    //System.out.println(&quot;tempo di delta t calcolato&quot;+deltat.getTime());&#xD;
+    rt.setDeltat(deltat);&#xD;
+    record.put(method + oggetto, rt);&#xD;
+    return deltat;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_plEnoHakEeeOUYOju89OBg" name="getDeltaT" specification="_pk_IEHakEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    long deltat = 0;&#xD;
+    RecordTime rt = record.get(method + oggetto);&#xD;
+    for (int i = 0; i &lt; rt.getDeltat().size() - 1; i++) {&#xD;
+        deltat = (long) (deltat + (1 - alpha) * rt.getDeltat().get(i).getTime());&#xD;
+    //System.out.println(&quot;tempo in get deltat&quot;+deltat);&#xD;
+    }&#xD;
+    if (rt.getDeltat().size() > 0) {&#xD;
+        deltat = (long) (deltat + alpha * (long) rt.getDeltat().get(rt.getDeltat().size() - 1).getTime());&#xD;
+        deltat = deltat / rt.getDeltat().size();&#xD;
+        //+deltat+deltat;&#xD;
+        deltat = 3 * deltat;&#xD;
+        //System.out.println(&quot;dimensione tempo&quot;+rt.getDeltat().size()+&quot; &quot;+method);&#xD;
+        return deltat;&#xD;
+    }&#xD;
+    return 0;&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pkf_43akEeeOUYOju89OBg" name="LogStructure" visibility="public" method="_pkkRUHakEeeOUYOju89OBg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pkmGgHakEeeOUYOju89OBg" name="getRecord" visibility="public" method="_pkn7sHakEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pknUoHakEeeOUYOju89OBg" type="_RLOZ0HaiEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pkpJ0HakEeeOUYOju89OBg" name="setRecord" visibility="public" method="_pkqX8XakEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pkqX8HakEeeOUYOju89OBg" name="record" type="_RLOZ0HaiEeeOUYOju89OBg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pkrmEHakEeeOUYOju89OBg" name="setSSTT" visibility="public" method="_pky60HakEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pkvQcHakEeeOUYOju89OBg" name="method" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pkwekHakEeeOUYOju89OBg" name="t" type="_8I1lIHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pkxFoHakEeeOUYOju89OBg" name="istanza" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pkxssHakEeeOUYOju89OBg" name="oggetto">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pk0wAHakEeeOUYOju89OBg" name="setSEN" visibility="public" method="_pk8r0HakEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pk4aYHakEeeOUYOju89OBg" type="_8I1lIHahEeeOUYOju89OBg" direction="return"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pk5BcHakEeeOUYOju89OBg" name="method" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pk6PkHakEeeOUYOju89OBg" name="t" type="_8I1lIHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pk7dsHakEeeOUYOju89OBg" name="istanza" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_pk8EwHakEeeOUYOju89OBg" name="oggetto">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_pk_IEHakEeeOUYOju89OBg" name="getDeltaT" visibility="public" method="_plEnoHakEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_plCLYHakEeeOUYOju89OBg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_8heigBydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_plDZgHakEeeOUYOju89OBg" name="method" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_plEAkHakEeeOUYOju89OBg" name="oggetto">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_y1KBAHamEeeOUYOju89OBg" name="Rilevatore eventi" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y1LPIHamEeeOUYOju89OBg" name="logger" visibility="private" isStatic="true" type="_8AwAIHahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y1LPIXamEeeOUYOju89OBg" name="logFile" visibility="private" type="_8F6M8HahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y1L2MHamEeeOUYOju89OBg" name="logs" visibility="private" isStatic="true" type="_H5alUHakEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y1L2MXamEeeOUYOju89OBg" name="nex" visibility="private" isStatic="true" type="_8GKEkHahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y1y6MHamEeeOUYOju89OBg" name="___ITD_INSERTED_IDENTIFIER___0" visibility="private" type="_8IwFkHahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y1zhQHamEeeOUYOju89OBg" name="___ITD_INSERTED_IDENTIFIER___1" visibility="private" type="_8I1lIHahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_y10vYHamEeeOUYOju89OBg" name="___ITD_INSERTED_IDENTIFIER___2" visibility="private" type="_8I52kHahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1OScXamEeeOUYOju89OBg" name="Loggable" specification="_y1MdQHamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    logger = Logger.getLogger(Loggable.class.getPackage().getName());&#xD;
+    logs = new LogStructure();&#xD;
+    nex = new Vector&lt;String>();&#xD;
+    try {&#xD;
+        logFile = new FileHandler(Loggable.class.getPackage().getName() + &quot;.txt&quot;, true);&#xD;
+        LogFormatter format = new LogFormatter();&#xD;
+        logFile.setFormatter(format);&#xD;
+        logger.addHandler(logFile);&#xD;
+    //logger.setUseParentHandlers(false);&#xD;
+    } catch (IOException e) {&#xD;
+        e.printStackTrace();&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1RVwHamEeeOUYOju89OBg" name="writeLog" specification="_y1O5gHamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    String cl = MethodSignature.class.cast(g.getSignature()).toShortString();&#xD;
+    int ob = Object.class.cast(g.getThis()).hashCode();&#xD;
+    if ((avviso.compareTo(&quot;SSTR&quot;) == 0) || (avviso.compareTo(&quot;SENR&quot;) == 0)) {&#xD;
+        avviso = avviso.replace(&quot;SSTR&quot;, &quot;SST&quot;);&#xD;
+        avviso = avviso.replace(&quot;SENR&quot;, &quot;SEN&quot;);&#xD;
+        System.out.println(&quot;avviso  &quot; + avviso);&#xD;
+        ob = 0;&#xD;
+    }&#xD;
+    if (avviso.compareTo(&quot;SST&quot;) == 0) {&#xD;
+        logs.setSSTT(cl, new Date(System.currentTimeMillis()), tn, ob);&#xD;
+        LogRecord record = new LogRecord(Level.INFO, avviso + &quot; &quot; + cl + &quot; &quot; + ob + &quot; &quot; + tn);&#xD;
+        System.out.println(&quot;SST&quot; + &quot; &quot; + ob);&#xD;
+        logger.log(record);&#xD;
+    } else if (avviso.compareTo(&quot;SEN&quot;) == 0) {&#xD;
+        Date deltat = logs.setSEN(cl, new Date(System.currentTimeMillis()), tn, ob);&#xD;
+        LogRecord record = new LogRecord(Level.INFO, avviso + &quot; &quot; + cl + &quot; &quot; + ob + &quot; &quot; + tn + &quot; &quot; + deltat.getTime());&#xD;
+        System.out.println(&quot;SEN&quot; + &quot; &quot; + ob);&#xD;
+        logger.log(record);&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1VAInamEeeOUYOju89OBg" name="writeLogCMP" specification="_y1RVwXamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Object cl = g.getThis();&#xD;
+    LogRecord record = new LogRecord(Level.WARNING, &quot;CMP &quot; + cl + &quot; &quot; + &quot; &quot; + ex);&#xD;
+    logger.log(record);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1YDcXamEeeOUYOju89OBg" name="writeLogCE" specification="_y1VnMHamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    String cl = CatchClauseSignature.class.cast(g.getSignature()).getDeclaringType().getName();&#xD;
+    LogRecord record = new LogRecord(Level.INFO, &quot;gestione eccezione &quot; + cl + &quot; &quot; + &quot; &quot; + ex);&#xD;
+    logger.log(record);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1eKEHamEeeOUYOju89OBg" name="writeLogm" specification="_y1YqgHamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    if (avviso.compareTo(&quot;SST&quot;) == 0) {&#xD;
+        LogRecord record = new LogRecord(Level.INFO, avviso + &quot; &quot; + g.getSignature().getName() + &quot; &quot; + g.getSignature().getDeclaringTypeName());&#xD;
+        logger.log(record);&#xD;
+    } else if (avviso.compareTo(&quot;SEN&quot;) == 0) {&#xD;
+        LogRecord record = new LogRecord(Level.INFO, avviso + &quot; &quot; + g.getSignature().getName());&#xD;
+        record.setMessage(avviso + &quot; &quot; + g.getSignature().getName());&#xD;
+        logger.log(record);&#xD;
+    }&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1pJMXamEeeOUYOju89OBg" name="b" specification="_y1pJMHamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    String e = CatchClauseSignature.class.cast(thisJoinPoint.getSignature()).toLongString();&#xD;
+    Loggable.writeLogCE(thisJoinPoint, e, Thread.currentThread().getName());&#xD;
+    System.out.println(&quot;qui&quot;);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1rlcHamEeeOUYOju89OBg" name="a" specification="_y1qXUHamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    Loggable.writeLog(thisJoinPoint, &quot;SEN&quot;, Thread.currentThread().getName());&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_y1xsEHamEeeOUYOju89OBg" name="a" specification="_y1uowHamEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    nex.add(thisJoinPoint.getSignature().toShortString() + thisJoinPoint.getThis().toString());&#xD;
+    System.out.println(&quot;sono eccezione&quot; + e.toString());&#xD;
+    Loggable.writeLogCMP(thisJoinPoint, e.toString(), Thread.currentThread().getName());&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1MdQHamEeeOUYOju89OBg" name="Loggable" visibility="public" method="_y1OScXamEeeOUYOju89OBg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1O5gHamEeeOUYOju89OBg" name="writeLog" visibility="public" isStatic="true" method="_y1RVwHamEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1QusHamEeeOUYOju89OBg" name="g" type="_8GolsHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1QusXamEeeOUYOju89OBg" name="avviso" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1QusnamEeeOUYOju89OBg" name="tn" type="_8GxvoHahEeeOUYOju89OBg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1RVwXamEeeOUYOju89OBg" name="writeLogCMP" visibility="public" isStatic="true" method="_y1VAInamEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1TyAXamEeeOUYOju89OBg" name="g" type="_8GolsHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1VAIHamEeeOUYOju89OBg" name="ex" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1VAIXamEeeOUYOju89OBg" name="tn" type="_8GxvoHahEeeOUYOju89OBg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1VnMHamEeeOUYOju89OBg" name="writeLogCE" visibility="public" isStatic="true" method="_y1YDcXamEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1XcYHamEeeOUYOju89OBg" name="g" type="_8GolsHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1XcYXamEeeOUYOju89OBg" name="ex" type="_8GxvoHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1YDcHamEeeOUYOju89OBg" name="tn" type="_8GxvoHahEeeOUYOju89OBg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1YqgHamEeeOUYOju89OBg" name="writeLogm" visibility="public" isStatic="true" method="_y1eKEHamEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1bGwHamEeeOUYOju89OBg" name="g" type="_8GolsHahEeeOUYOju89OBg"/>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1c78HamEeeOUYOju89OBg" name="avviso" type="_8GxvoHahEeeOUYOju89OBg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1fYMHamEeeOUYOju89OBg" name="allMethod" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1f_QHamEeeOUYOju89OBg" type="_8Hx1MHahEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1gmUHamEeeOUYOju89OBg" name="allMethode" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1hNYHamEeeOUYOju89OBg" type="_8Hx1MHahEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1h0cHamEeeOUYOju89OBg" name="he" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1h0cXamEeeOUYOju89OBg" type="_8Hx1MHahEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1ibgHamEeeOUYOju89OBg" name="LogStructure" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1jCkHamEeeOUYOju89OBg" type="_8Hx1MHahEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1jpoHamEeeOUYOju89OBg" name="hre" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1k3wHamEeeOUYOju89OBg" type="_8Hx1MHahEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1le0HamEeeOUYOju89OBg" name="main" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1mF4HamEeeOUYOju89OBg" type="_8Hx1MHahEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1nUAHamEeeOUYOju89OBg" name="run" visibility="private">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1oiIHamEeeOUYOju89OBg" type="_8Hx1MHahEeeOUYOju89OBg" direction="return"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1pJMHamEeeOUYOju89OBg" name="b" visibility="private" method="_y1pJMXamEeeOUYOju89OBg"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1qXUHamEeeOUYOju89OBg" name="a" visibility="private" method="_y1rlcHamEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1q-YHamEeeOUYOju89OBg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_y1uowHamEeeOUYOju89OBg" name="a" visibility="private" method="_y1xsEHamEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1vP0HamEeeOUYOju89OBg" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://PapyrusJava_LIBRARIES/JavaLibrary.uml#_7wRIABydEduyofBvg4RL2w"/>
+            </ownedParameter>
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_y1wd8HamEeeOUYOju89OBg" name="e" type="_8IlGcHahEeeOUYOju89OBg"/>
+          </ownedOperation>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Mtxk0HanEeeOUYOju89OBg" name="WatchDog" visibility="public">
+          <generalization xmi:type="uml:Generalization" xmi:id="_Mt1PMHanEeeOUYOju89OBg" general="_Mtyy8HanEeeOUYOju89OBg"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Mt12QHanEeeOUYOju89OBg" name="logger" visibility="private" isStatic="true" type="_8AwAIHahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_Mt2dUHanEeeOUYOju89OBg" name="method" visibility="private" type="_8GxvoHahEeeOUYOju89OBg" isUnique="false"/>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Mt45kXanEeeOUYOju89OBg" name="WatchDog" specification="_Mt2dUXanEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    m = method;&#xD;
+    logger = Logger.getLogger(Loggable.class.getPackage().getName());&#xD;
+</body>
+          </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Mt5goXanEeeOUYOju89OBg" name="run" specification="_Mt5goHanEeeOUYOju89OBg">
+            <language>JAVA</language>
+            <body>&#xD;
+    System.out.println(&quot;SER error fuori tempo!!!! &quot; + m);&#xD;
+    LogRecord record = new LogRecord(Level.WARNING, &quot;SER  &quot; + m);&#xD;
+    logger.log(record);&#xD;
+</body>
+          </ownedBehavior>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Mt2dUXanEeeOUYOju89OBg" name="WatchDog" visibility="public" method="_Mt45kXanEeeOUYOju89OBg">
+            <ownedParameter xmi:type="uml:Parameter" xmi:id="_Mt45kHanEeeOUYOju89OBg" name="method" type="_8GxvoHahEeeOUYOju89OBg"/>
+          </ownedOperation>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Mt5goHanEeeOUYOju89OBg" name="run" visibility="public" method="_Mt5goXanEeeOUYOju89OBg"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Mtyy8HanEeeOUYOju89OBg" name="TimerTask"/>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8GjtMHahEeeOUYOju89OBg" name="importedTypes">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8GkUQHahEeeOUYOju89OBg" name="org">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8GmwgHahEeeOUYOju89OBg" name="aspectj">
+          <packagedElement xmi:type="uml:Package" xmi:id="_8GnXkHahEeeOUYOju89OBg" name="lang">
+            <packagedElement xmi:type="uml:Class" xmi:id="_8GolsHahEeeOUYOju89OBg" name="JoinPoint"/>
+          </packagedElement>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_8GusUHahEeeOUYOju89OBg" name="java">
+      <packagedElement xmi:type="uml:Package" xmi:id="_8Gv6cHahEeeOUYOju89OBg" name="java">
+        <packagedElement xmi:type="uml:Package" xmi:id="_8GxIkHahEeeOUYOju89OBg" name="lang">
+          <packagedElement xmi:type="uml:Class" xmi:id="_8GxvoHahEeeOUYOju89OBg" name="String"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_8IlGcHahEeeOUYOju89OBg" name="Exception"/>
+          <packagedElement xmi:type="uml:Class" xmi:id="_8I52kHahEeeOUYOju89OBg" name="Thread"/>
+        </packagedElement>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_SVtdsHanEeeOUYOju89OBg" name="informa" visibility="public" memberEnd="_SVur0HanEeeOUYOju89OBg _SVvS4XanEeeOUYOju89OBg" navigableOwnedEnd="_SVur0HanEeeOUYOju89OBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SVuEwHanEeeOUYOju89OBg" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SVuEwXanEeeOUYOju89OBg" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_SVvS4XanEeeOUYOju89OBg" type="_y1KBAHamEeeOUYOju89OBg" association="_SVtdsHanEeeOUYOju89OBg"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_SVur0HanEeeOUYOju89OBg" type="_H5alUHakEeeOUYOju89OBg" association="_SVtdsHanEeeOUYOju89OBg">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SVur0XanEeeOUYOju89OBg" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SVvS4HanEeeOUYOju89OBg" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_55x3UHbHEeeKwv_a6u0sZQ" name="avvia" visibility="public" memberEnd="_55zFcXbHEeeKwv_a6u0sZQ _550TkXbHEeeKwv_a6u0sZQ" navigableOwnedEnd="_55zFcXbHEeeKwv_a6u0sZQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_55yeYHbHEeeKwv_a6u0sZQ" source="org.eclipse.papyrus">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_55zFcHbHEeeKwv_a6u0sZQ" key="nature" value="UML_Nature"/>
+      </eAnnotations>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_550TkXbHEeeKwv_a6u0sZQ" type="_H5alUHakEeeOUYOju89OBg" association="_55x3UHbHEeeKwv_a6u0sZQ"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="_55zFcXbHEeeKwv_a6u0sZQ" type="_Mtxk0HanEeeOUYOju89OBg" association="_55x3UHbHEeeKwv_a6u0sZQ">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_55zsgHbHEeeKwv_a6u0sZQ" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_550TkHbHEeeKwv_a6u0sZQ" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7_ElIHahEeeOUYOju89OBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7_IPgHahEeeOUYOju89OBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/PapyrusJava/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://PapyrusJava_PROFILES/PapyrusJava.profile.uml#_j9REUByGEduN1bTiWJ0lyw"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7_pM4HahEeeOUYOju89OBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7_qbAHahEeeOUYOju89OBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/Codegen/1#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://Codegen_PROFILES/Codegen.profile.uml#_fPDsIBa-EearhdjjJ6cVzQ"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_7_65sHahEeeOUYOju89OBg">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7_8H0HahEeeOUYOju89OBg" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard#/"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
+    </profileApplication>
+  </uml:Model>
+  <PapyrusJava:External xmi:id="_8FxqEHahEeeOUYOju89OBg" name="Logger" base_Classifier="_8AwAIHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8F-eYHahEeeOUYOju89OBg" name="FileHandler" base_Classifier="_8F6M8HahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8GNu8HahEeeOUYOju89OBg" name="Vector" base_Classifier="_8GKEkHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8Gs3IHahEeeOUYOju89OBg" name="org.aspectj.lang.JoinPoint" base_Classifier="_8GolsHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8G1aAHahEeeOUYOju89OBg" name="java.lang.String" base_Classifier="_8GxvoHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8H0RcHahEeeOUYOju89OBg" name="pointcut" base_Classifier="_8Hx1MHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8IoJwHahEeeOUYOju89OBg" name="java.lang.Exception" base_Classifier="_8IlGcHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8Iyh0HahEeeOUYOju89OBg" name="RuntimeException" base_Classifier="_8IwFkHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8I3aUHahEeeOUYOju89OBg" name="Date" base_Classifier="_8I1lIHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_8I8S0HahEeeOUYOju89OBg" name="java.lang.Thread" base_Classifier="_8I52kHahEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_RLRdIHaiEeeOUYOju89OBg" name="Map" base_Classifier="_RLOZ0HaiEeeOUYOju89OBg"/>
+  <standard:Create xmi:id="_pkicIHakEeeOUYOju89OBg" base_BehavioralFeature="_pkf_43akEeeOUYOju89OBg"/>
+  <PapyrusJava:Synchronized xmi:id="_pktbQHakEeeOUYOju89OBg" base_Operation="_pkrmEHakEeeOUYOju89OBg"/>
+  <PapyrusJava:Synchronized xmi:id="_pk2lMHakEeeOUYOju89OBg" base_Operation="_pk0wAHakEeeOUYOju89OBg"/>
+  <PapyrusJava:Synchronized xmi:id="_plBkUHakEeeOUYOju89OBg" base_Operation="_pk_IEHakEeeOUYOju89OBg"/>
+  <standard:Create xmi:id="_y1OScHamEeeOUYOju89OBg" base_BehavioralFeature="_y1MdQHamEeeOUYOju89OBg"/>
+  <PapyrusJava:Synchronized xmi:id="_y1QHoHamEeeOUYOju89OBg" base_Operation="_y1O5gHamEeeOUYOju89OBg"/>
+  <PapyrusJava:Synchronized xmi:id="_y1TyAHamEeeOUYOju89OBg" base_Operation="_y1RVwXamEeeOUYOju89OBg"/>
+  <PapyrusJava:Synchronized xmi:id="_y1W1UHamEeeOUYOju89OBg" base_Operation="_y1VnMHamEeeOUYOju89OBg"/>
+  <PapyrusJava:Synchronized xmi:id="_y1Z4oHamEeeOUYOju89OBg" base_Operation="_y1YqgHamEeeOUYOju89OBg"/>
+  <PapyrusJava:External xmi:id="_Mt0oIHanEeeOUYOju89OBg" name="TimerTask" base_Classifier="_Mtyy8HanEeeOUYOju89OBg"/>
+  <standard:Create xmi:id="_Mt4SgHanEeeOUYOju89OBg" base_BehavioralFeature="_Mt2dUXanEeeOUYOju89OBg"/>
+</xmi:XMI>
