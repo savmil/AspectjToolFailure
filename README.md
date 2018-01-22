@@ -1,2 +1,12 @@
 # AspectjToolFailure
 Per poter installare tutti i componenti che occorrono per poter effettuare modifiche al tool in ambiente Eclipse o per poterlo integrare in un programma di esempio riferirsi alla prima pagina del secondo paragrafo del seguente elaborato http://www.ingegneria-informatica.unina.it/sites/default/files/elaborati_tesi/2017/09/Elaborato%20Milo%20Saverio%20N46002459.pdf
+
+
+# Utilizzare il tool per tracciare fallimenti in AtiveMQ
+* Recarsi al seguente indirizzo https://github.com/apache/activemq, cliccare su clone or download e su download zip per scaricare i file per effettuare un build di AtiveMQuna volta scaricati i file estrarre la cartella.
+* Aprire il programma Eclipse, selezionare Help, Install New Software aggiungere il seguente indirizzo http://download.eclipse.org/technology/m2e/releases, selezionare l' unico pacchetto disponibile ed installare, alla fine dell' installazione riavviare.
+* Prima di include il progetto, sostituire il POM.xml presente in activemq-master con POM_master.xml, rinominandolo in POM.xml inoltre sostituire il POM.xml presete in activemq-master/activemq-client con il POM_client.xml rinominandolo in POM.xml, copiare i file presenti nella cartella AspectJToolFailure in activemq-master/activemq-client/src/main/java/org/apache/activemq tranne Loggable.aj, utilizzare la copia di questo file presente nella root del progetto su git, opportunamente modificato per scrivere il file di log su Desktop ed aggiungere l' annotazione @Log ala riga 259 del file ActiveMQConnectionFactory, per loggare l' operazione di createQueueConnection().
+* Ritornare in Eclipse, selezionare File, Import, Maven, Existing Maven Project e selezionare la cartella activemq-master, premere finish per includere.
+* Cliccare con il tasto destro sulla cartella presente in Eclipse activemq-master, Run As, Maven build..., si aprirà una finestra di wizard ed in Goals inserire questa stringa -Dtest=false -DfailIfNoTests=false -DskipTest=true, attendere il completamento dell' operazione di build.
+* Recarsi nella cartella in cui Eclipse salva i progetti (di solito nella cartella nome_utente_pc/eclipse-workspace), aprire la cartella activemq-master/assembly/target qui è presente uno zip con il progetto eseguibile, scompattarlo aprire la cartella appena scompattata ed rinominare l' estensione del file jar in zip, scompattarlo ed includere la cartella aspectj presente nella root del progetto, rieffettuare la compressione del file in .zip ed modificare l' estensione in .jar.
+* Ora potete avviare ActiveMQ.
